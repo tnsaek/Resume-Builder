@@ -1,0 +1,26 @@
+{
+  "name": "resume-and-cover-letter-builder",
+  "private": true,
+  "version": "0.1.0",
+  "description": "React and Node application for building tailored resumes and cover letters.",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "migrate": "npm --prefix server run migrate",
+    "build": "npm --prefix client run build",
+    "preview": "npm --prefix client run preview",
+    "test:client": "npm --prefix client test",
+    "test:server": "npm --prefix server test",
+    "check:server": "node --check server/index.js && node --check server/scripts/migrate.js && node --check server/src/config.js && node --check server/src/db.js && node --check server/src/middleware/authenticateToken.js && node --check server/src/middleware/handleValidationErrors.js && node --check server/src/routes/auth.js && node --check server/src/routes/drafts.js && node --check server/src/routes/generate.js && node --check server/src/routes/health.js && node --check server/src/routes/profile.js",
+    "verify:basic": "node scripts/verify-basic.js",
+    "check": "npm run check:server && npm run verify:basic && npm run test:client && npm run test:server && npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

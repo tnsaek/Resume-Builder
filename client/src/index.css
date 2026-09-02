@@ -1,0 +1,552 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.app-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.auth-card,
+.account-card,
+.profile-card,
+.generate-card,
+.saved-card {
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+}
+
+.auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.account-identity-grid {
+  align-items: center;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 112px minmax(0, 1fr);
+}
+
+.avatar-preview {
+  align-items: center;
+  aspect-ratio: 1;
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  border-radius: 999px;
+  color: #075985;
+  display: flex;
+  font-size: 2.2rem;
+  font-weight: 800;
+  justify-content: center;
+  overflow: hidden;
+  width: 112px;
+}
+
+.avatar-preview img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.profile-header h2 {
+  margin: 0;
+}
+
+.form-section {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.first-section {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.form-section h3 {
+  margin: 0 0 16px;
+  font-size: 1rem;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.job-post-input {
+  min-height: 260px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2563eb;
+  outline: 3px solid #bfdbfe;
+}
+
+.form-section label:not(:first-child) {
+  margin-top: 16px;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.generate-layout {
+  align-items: start;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 420px);
+}
+
+.draft-save-bar {
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.draft-list {
+  display: grid;
+  gap: 12px;
+}
+
+.draft-list-item {
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.draft-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.draft-rename-form {
+  flex: 1;
+  min-width: 240px;
+}
+
+.draft-rename-form label {
+  font-size: 0.9rem;
+}
+
+.draft-list-item h3,
+.draft-list-item p,
+.empty-state {
+  margin: 0;
+}
+
+.draft-list-item h3 {
+  font-size: 1rem;
+}
+
+.draft-list-item p,
+.empty-state {
+  color: #4b5563;
+}
+
+.resume-preview-panel {
+  position: sticky;
+  top: 20px;
+}
+
+.resume-preview-header {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.resume-preview-header h3 {
+  margin: 0;
+}
+
+.resume-fit-note {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  color: #9a3412;
+  font-size: 0.88rem;
+  margin: 0 0 12px;
+  padding: 8px 10px;
+}
+
+.resume-page {
+  aspect-ratio: 8.5 / 11;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  color: #111827;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.7rem;
+  line-height: 1.22;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.resume-header {
+  border-bottom: 1px solid #111827;
+  padding-bottom: 6px;
+  text-align: center;
+}
+
+.resume-header h2 {
+  font-size: 1.34rem;
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.resume-headline,
+.resume-contact {
+  margin: 3px 0 0;
+}
+
+.resume-contact {
+  font-size: 0.62rem;
+  overflow-wrap: anywhere;
+}
+
+.resume-section {
+  margin-top: 7px;
+}
+
+.resume-section h4 {
+  border-bottom: 1px solid #9ca3af;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0;
+  margin: 0 0 3px;
+  text-transform: uppercase;
+}
+
+.resume-section p {
+  margin: 0 0 3px;
+}
+
+.resume-section ul {
+  margin: 0;
+  padding-left: 14px;
+}
+
+.resume-section li {
+  margin-bottom: 2px;
+}
+
+button {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  background: #2563eb;
+  color: white;
+  line-height: 1.2;
+  max-width: 100%;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 700;
+  white-space: normal;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button.secondary:hover {
+  background: #d1d5db;
+}
+
+button.danger {
+  background: #dc2626;
+}
+
+button.danger:hover {
+  background: #b91c1c;
+}
+
+button.link-button {
+  background: transparent;
+  color: #2563eb;
+  margin-top: 12px;
+  padding: 0;
+}
+
+button.link-button:hover {
+  background: transparent;
+  color: #1d4ed8;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.field-error {
+  color: #b91c1c;
+  font-weight: 600;
+  margin: 10px 0 0;
+}
+
+.form-message {
+  border-radius: 8px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  padding: 10px 12px;
+}
+
+.form-message-success {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+.form-message-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.flow-note {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  color: #1e40af;
+  font-weight: 600;
+  margin: 0 0 16px;
+  padding: 10px 12px;
+}
+
+.usage-note {
+  color: #4b5563;
+  font-size: 0.95rem;
+  margin: 12px 0 0;
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 24px 16px;
+  }
+
+  header h1 {
+    font-size: 1.35rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .profile-header,
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .generate-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-preview-panel {
+    position: static;
+  }
+
+  .profile-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .draft-save-bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .draft-list-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .account-identity-grid {
+    align-items: flex-start;
+    grid-template-columns: 1fr;
+  }
+
+  .draft-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  header h1 {
+    max-width: 17ch;
+  }
+
+  .auth-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .auth-actions button {
+    width: 100%;
+  }
+}
+
+@media print {
+  @page {
+    margin: 0.35in;
+    size: letter;
+  }
+
+  :root {
+    background: #fff;
+  }
+
+  body,
+  html,
+  #root {
+    background: #fff;
+    min-height: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .resume-page,
+  .resume-page * {
+    visibility: visible;
+  }
+
+  .app-shell,
+  main,
+  .generate-layout,
+  .resume-preview-panel {
+    display: block;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+  }
+
+  header,
+  .app-nav,
+  .generate-card,
+  .resume-preview-header,
+  .form-message {
+    display: none;
+  }
+
+  .resume-fit-note {
+    display: none;
+  }
+
+  .resume-page {
+    aspect-ratio: auto;
+    border: 0;
+    box-shadow: none;
+    font-size: 8.7pt;
+    height: auto;
+    left: 0;
+    line-height: 1.18;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .resume-header h2 {
+    font-size: 15.5pt;
+  }
+
+  .resume-contact {
+    font-size: 7.4pt;
+  }
+
+  .resume-section {
+    break-inside: avoid;
+    margin-top: 5.5pt;
+  }
+
+  .resume-section h4 {
+    font-size: 7.4pt;
+    margin-bottom: 2pt;
+  }
+
+  .resume-section li {
+    margin-bottom: 1.5pt;
+  }
+}
